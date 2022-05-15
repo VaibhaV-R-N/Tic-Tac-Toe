@@ -212,18 +212,14 @@ int cpuTurn(void){
 
 	updateCpuMoves();
 	printf("indP : %d\n",indP);
-	// for(int i = 0;i<18;i++){
-	// 	printf("%d\n",cpuPMoves[i]);
-	// }
-
-	// printf("\nvalue of ind : %d\n",ind);
+	
 	if(ind < 2) {
 		randomMove();
 		return 0;
 	}
 
 	srand(time(0));
-	// if(indP == 0){
+
 		int r = rand() % (ind-1);
 
 		
@@ -233,85 +229,13 @@ int cpuTurn(void){
 		else{
 			setMove(cpuMoves[r-1],cpuMoves[r],cpu.move);
 		}
-	// }
-	// else{
-	// 	int r = rand() % (indP-1);
 
-		
-	// 	if(r % 2 == 0){
-	// 		setMove(cpuPMoves[r],cpuPMoves[r+1],cpu.move);
-	// 	}
-	// 	else{
-	// 		setMove(cpuPMoves[r-1],cpuPMoves[r],cpu.move);
-	// 	}
-	// }
 
 	return 0;	
 }
 
 int updateCpuMoves(){
 	ind = 0;
-	// indP = 0;
-	// int x,y;
-
-	// for(int i=0; i<3; i++){
-	
-	// 	for(int j=0; j<3;j++){
-	// 		if(board[i][j] == cpu.move){
-	// 			int c=0;
-	// 			for(int k=0; k<3; k++){
-	// 				if(board[k][j] == cpu.move){
-	// 					c++;
-	// 				}
-	// 				if(board[k][j] == ' '){
-	// 					 x = k;
-	// 					 y = j;
-	// 				}
-	// 				if(c == 2){
-	// 					cpuPMoves[indP] = x;
-	// 					cpuPMoves[++indP] = y;
-	// 					indP++;
-	// 				}
-	// 			}
-	// 			c = 0;
-	// 			for(int k=0; k<3; k++){
-	// 				if(board[i][k] == cpu.move){
-	// 					c++;
-	// 				}
-	// 				if(board[i][k] == ' '){
-	// 					 x = k;
-	// 					 y = j;
-	// 				}
-	// 				if(c == 2){
-	// 					cpuPMoves[indP] = x;
-	// 					cpuPMoves[++indP] = y;
-	// 					indP++;
-	// 				}
-	// 			}
-	// 			c = 0;
-	// 			if(i==0 && j==0 || i==1 && j==1 || i==2 && j==2 ){
-	// 				for(int k = 0,l = 0; k<3 && l<3; k++,l++){
-	// 						if(board[k][l] == cpu.move){
-	// 							c++;
-	// 						}
-	// 						if(board[k][l] == ' '){
-	// 							x = k;
-	// 							y = l;
-	// 						}
-	// 						if(c == 2){
-	// 						cpuPMoves[indP] = x;
-	// 						cpuPMoves[++indP] = y;
-	// 						indP++;
-	// 						}	
-	// 				}
-	// 			}
-
-				
-	// 		}
-	// 	}
-	// }
-
-
 
 	for(int i = 0; i < 3; i++){
 		for(int j = 0; j < 3; j++){
